@@ -1,0 +1,296 @@
+/* =============== GLOBAL RESET =============== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: rgb(232, 188, 164);
+    color: #2c3e50;
+}
+
+/* =============== HEADER =============== */
+.header {
+    background-color: #e74c3c; /* STICKY COLORED HEADER */
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.4rem 0.8rem;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+/* =============== HERO =============== */
+.hero {
+    height: 100vh;
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('https://images.unsplash.com/photo-1498654896293-37aacf113fd9') center/cover no-repeat;
+}
+
+.hero-content {
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+/* Buttons */
+.btn {
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.btn-primary {
+    background-color: #1e1c1c;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: black;
+}
+
+.btn-secondary {
+    background-color: white;
+    color: #e74c3c;
+}
+
+/* =============== SECTIONS =============== */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+    color: #e74c3c;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+/* =============== MENU =============== */
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
+}
+
+.price {
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+/* =============== ABOUT =============== */
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* =============== FORM =============== */
+.reservation-form {
+    max-width: 600px;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 0.4rem;
+    display: block;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0.7rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submit-btn {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+/* =============== FOOTER =============== */
+.footer {
+    background-color: #1e1e1e;
+    color: white;
+    padding: 2rem 0;
+    margin-top: 4rem;
+}
+
+.footer-bottom {
+    text-align: center;
+}
+
+/* =============== ANIMATION =============== */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* =============== RESPONSIVE =============== */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        background-color: #e74c3c;
+        padding: 1rem;
+        position: absolute;
+        right: 0;
+        top: 70px;
+        display: none;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .btn {
+        width: 80%;
+    }
+}
+
+
+/* ------- Submit Button Hover Animation ------- */
+.submit-btn {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    padding: 0.9rem 2rem;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    transform: translateY(-3px);
+    background-color: #c2320e;
+}
+
+/* ------- Mobile Full Width ------- */
+@media (max-width: 600px) {
+    .submit-btn {
+        width: 100%;
+    }
+}
+
+/* ------- Success Popup ------- */
+.success-popup {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #27ae60;
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+    z-index: 2000;
+}
+
+.success-popup.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-10px);
+}
+
+
+/* ================= POPUP MESSAGE ================= */
+.popup {
+    position: fixed;
+    top: 20px;
+    right: -300px;
+    padding: 15px 25px;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1rem;
+    z-index: 9999;
+    transition: right 0.4s ease;
+}
+
+.popup.show {
+    right: 20px;
+}
+
+.popup.success {
+    background-color: #28a745; /* green */
+}
+
+.popup.error {
+    background-color: #e74c3c; /* red */
+}

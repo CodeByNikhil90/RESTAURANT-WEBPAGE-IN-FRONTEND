@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant Website</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header class="header">
+        <div class="container navbar">
+            <div class="logo">
+                <h1>Foodies</h1>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#reservation">Reservation</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- ================= HERO ================= -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Welcome to Foodies Restaurant</h2>
+            <p>Experience the finest meals prepared with the freshest ingredients and unmatched passion.</p>
+
+            <div class="hero-buttons">
+                <a href="#menu" class="btn btn-primary">View Menu</a>
+                <a href="#reservation" class="btn btn-secondary">Reserve Table</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= MENU ================= -->
+    <section id="menu" class="menu container">
+        <h2 class="section-title">Our Menu</h2>
+        <p class="section-subtitle">Delicious dishes crafted with perfection.</p>
+
+        <div class="menu-category">
+            <h3>Starters</h3>
+
+            <div class="menu-item">
+                <span>Spring Rolls</span>
+                <span class="price">₹120</span>
+            </div>
+
+            <div class="menu-item">
+                <span>Paneer Tikka</span>
+                <span class="price">₹200</span>
+            </div>
+
+            <div class="menu-item">
+                <span>Garlic Bread</span>
+                <span class="price">₹150</span>
+            </div>
+        </div>
+
+        <div class="menu-category">
+            <h3>Main Course</h3>
+
+            <div class="menu-item">
+                <span>Butter Chicken</span>
+                <span class="price">₹350</span>
+            </div>
+
+            <div class="menu-item">
+                <span>Veg Biryani</span>
+                <span class="price">₹250</span>
+            </div>
+
+            <div class="menu-item">
+                <span>Paneer Lababdar</span>
+                <span class="price">₹300</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section id="about" class="about container">
+        <div class="about-content">
+            <div class="about-text">
+                <h2 class="section-title">About Us</h2>
+                <p>
+                    At Foodies, we combine authentic flavors with a modern touch.
+                    Our chefs ensure that every dish we serve is filled with taste,
+                    love, and satisfaction. With years of experience, we maintain the
+                    highest standards of quality and freshness.
+                </p>
+            </div>
+
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1498654896293-37aacf113fd9" alt="Restaurant Image" />
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section id="contact" class="contact container">
+        <div class="contact-content">
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+
+                <div class="contact-item">
+                    <strong>Address:</strong>
+                    123 Restaurant Street, India
+                </div>
+
+                <div class="contact-item">
+                    <strong>Email:</strong>
+                    info@foodies.com
+                </div>
+
+                <div class="contact-item">
+                    <strong>Phone:</strong>
+                    +91 9876543210
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= RESERVATION ================= -->
+    <section id="reservation" class="contact container">
+        <h2 class="section-title">Reserve Your Table</h2>
+
+        <form class="reservation-form" id="reserveForm" action="#" method="post">
+
+            <div class="form-group">
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+
+            <div class="form-group">
+                <label for="date">Reservation Date:</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+
+            <div class="form-group">
+                <label for="time">Time:</label>
+                <select id="time" name="time" required>
+                    <option value="">Select Time</option>
+                    <option value="18:00">6:00 PM</option>
+                    <option value="19:00">7:00 PM</option>
+                    <option value="20:00">8:00 PM</option>
+                    <option value="21:00">9:00 PM</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="guests">Number of Guests:</label>
+                <select id="guests" name="guests" required>
+                    <option value="">Select guests</option>
+                    <option value="1">1 guest</option>
+                    <option value="2">2 guests</option>
+                    <option value="3">3 guests</option>
+                    <option value="5">5+ guests</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary submit-btn">✔ Submit Reservation</button>
+
+        </form>
+
+        <!-- SUCCESS POPUP -->
+        <div id="successPopup" class="success-popup">
+            Reservation Submitted Successfully! 🎉
+        </div>
+
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-bottom">© 2024 Foodies Restaurant. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- ========== JAVASCRIPT LINK HERE ========== -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+
+
+
